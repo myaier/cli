@@ -1,0 +1,28 @@
+{
+  "name": "@my.aier/aier",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myaier/ai.git"
+  },
+  "homepage": "https://github.com/myaier/ai",
+  "author": "dev@xvc.com",
+  "license": "MulanPSL-2.0",
+  "bin": {
+    "aier": "./bin.js"
+  },
+  "exports": {
+    ".": "./lib.js",
+    "./*": "./*"
+  },
+  "files": ["bin.js", "lib/*", "!*.sh", "!tests"],
+  "scripts": {},
+  "type": "module",
+  "dependencies": {
+    "@3-/read": "^0.1.4",
+    "@3-/req": "^0.1.18",
+    "@3-/write": "^0.0.2",
+    "ethers": "^6.13.5",
+    "yargs": "^18.0.0"
+  }
+}
