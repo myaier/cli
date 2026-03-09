@@ -1,4 +1,4 @@
-import blake3 from "@3-/blake3"
+import { blake3 } from "@3-/blake3"
 import { open } from "node:fs/promises"
 import { basename } from "node:path"
 import req from "../req.js"
@@ -23,6 +23,6 @@ export default async (filepath) => {
         }
     });
 
-    const json = await res.json();
-    console.log(json.url);
+    const text = await res.text();
+    console.log(text);
 };

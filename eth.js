@@ -1,4 +1,5 @@
 import { Wallet, verifyMessage } from 'ethers'
+import u8eq from '@3-/u8/u8eq.js'
 
 export const generate = () => {
     const wallet = Wallet.createRandom()
@@ -13,10 +14,10 @@ export const load = (privateKey) => new Wallet(privateKey)
 
 export const sign = async (wallet, message) => await wallet.signMessage(message)
 
-export const verify = (message, signature, addr) => {
-    addr = '0x' + Buffer.from(addr, 'base64url').toString('hex')
+export const verify = (message, signature, u8) => {
     const recoveredAddress = verifyMessage(message, signature)
-    return recoveredAddress.toLowerCase() === addr.toLowerCase()
+    const recoveredBin = Buffer.from(recoveredAddress.slice(2), 'hex')
+    return u8eq(recoveredBin, u8)
 }
 
 export default { generate, load, sign, verify }

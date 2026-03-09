@@ -3,12 +3,12 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "@myaier/aier",
+      "name": "@my.aier/aier",
       "dependencies": {
         "@3-/read": "^0.1.4",
         "@3-/req": "^0.1.18",
         "@3-/write": "^0.0.2",
-        "ethers": "^6.13.5",
+        "ethers": "^6.16.0",
         "yargs": "^18.0.0",
       },
     },
