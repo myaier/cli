@@ -3,7 +3,6 @@ import write from '@3-/write'
 import eth from './eth.js'
 import { join } from 'path'
 import { homedir } from 'os'
-import base64url from '../src/lib/base64url.js'
 
 const PATH = join(homedir(), ".config/aier/uid.key"),
     init = async () => {
